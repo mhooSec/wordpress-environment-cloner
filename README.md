@@ -2,6 +2,7 @@
 Script allowing to clone WordPress files and database from one environment to another.
 
 Usage: `./cloner-novars.sh <source_environment> <destination_environment>`
+
 Example: `./cloner-novars.sh prod dev1`
 
 Pre-requisites:
