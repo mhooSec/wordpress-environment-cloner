@@ -18,7 +18,7 @@ PROD_USER="ubuntu"
 PROD_HOST="production-website.com"
 
 # Paths in localhost
-BASE_PATH="/home/ubuntu"
+BASE_PATH="/var/www/development"
 LOCAL_TMP_PATH="/home/ubuntu/tmp"
 LOCAL_USER="ubuntu"
 LOCAL_HOST="development-website.net"
