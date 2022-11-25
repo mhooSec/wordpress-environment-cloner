@@ -22,6 +22,7 @@ BASE_PATH="/var/www/development"
 LOCAL_TMP_PATH="/home/ubuntu/tmp"
 LOCAL_USER="ubuntu"
 LOCAL_HOST="development-website.net"
+LOCAL_USERGROUP="www-data"
 
 # Naming conventions
 ## WARNING: If a new environment is added, please amend parameterValidation() function accordingly.
@@ -118,7 +119,7 @@ copyFromSourceToDestination() {
     echo "[SRC to DST Clone]: SQL file has been created."
   fi
 
-  chown -R $LOCAL_USER:www-data $BASE_PATH/$2
+  chown -R $LOCAL_USER:$LOCAL_USERGROUP $BASE_PATH/$2
 }
 
 deleteSqlFiles() {
