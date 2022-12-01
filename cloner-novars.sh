@@ -32,6 +32,7 @@ ENV_NAME_DEV1="dev1"
 ENV_NAME_V5="v5"
 ENV_NAME_PREPRO="prepro"
 ENV_NAME_NET="net"
+ENV_NAME_PHP8="php8"
 
 # Activating extglob in order to be able to use inverted expressions, as we do not want to remove wp-config.php from
 # each environment. We use inverted expression in deleteDestinationFolderFiles() function.
@@ -45,9 +46,10 @@ parameterValidation() {
   # Checking $1 is different than $2.
   if [[ -n $1 && -n $2 ]] && \
   [[ $1 == "$ENV_NAME_PRODUCTION" || $1 == "$ENV_NAME_DEV1" || $1 == "$ENV_NAME_DEV2" || \
-  $1 == "$ENV_NAME_PREPRO" || $1 == "$ENV_NAME_V5" || $1 == "$ENV_NAME_NET" ]] && \
+  $1 == "$ENV_NAME_PREPRO" || $1 == "$ENV_NAME_V5" || $1 == "$ENV_NAME_NET" || \
+  $1 == "$ENV_NAME_PHP8" ]] && \
   [[ $2 == "$ENV_NAME_DEV1" || $2 == "$ENV_NAME_DEV2" || $2 == "$ENV_NAME_PREPRO" || \
-  $2 == "$ENV_NAME_V5" || $2 == "$ENV_NAME_NET" ]] && \
+  $2 == "$ENV_NAME_V5" || $2 == "$ENV_NAME_NET" || $2 == "$ENV_NAME_PHP8" ]] && \
   [[ $1 != $2 ]]; then
     echo "[Parameter Validation]: Specified environments are correct."
   else
